@@ -127,8 +127,6 @@ void run(){
     data->CopyFrom(input);
 
     // forward
-    int i;
-    for (i = 0; i < 1000; i++) {
     workSpace.RunNet(predictNet.name());
 
     // get softmax blob and show the results
@@ -151,7 +149,6 @@ void run(){
     std::cout << "== predicted label: " << labelName[index] 
               << " ==\n== with probability: " << (*max * 100)
   	           << "% ==" << std::endl;
-    }
 }
 
 }    // namespace caffe2
